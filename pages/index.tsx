@@ -1,6 +1,6 @@
 import { useState } from 'react'
-// import { faSearch } from '@fortawesome/free-solid-svg-icons'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Menu from '../components/menu'
 import CountryCard from '../components/countryCard'
@@ -42,10 +42,10 @@ const Home = ({ countries }) => {
             ' duration-300 transition-colors'
           }
         >
-          {/*<FontAwesomeIcon*/}
-          {/*  icon={faSearch}*/}
-          {/*  className="text-lg absolute ml-10 pointer-events-none"*/}
-          {/*/>*/}
+          <FontAwesomeIcon
+            icon={faSearch}
+            className="text-lg absolute ml-10 pointer-events-none"
+          />
           <input
             className="h-full w-full pl-20 bg-transparent dark:placeholder:text-very-light-gray focus:outline-none"
             type="search"
