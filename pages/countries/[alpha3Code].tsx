@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import DescriptionList from '../../components/descriptionList'
 
@@ -86,7 +86,7 @@ const Details = ({ country, borders }) => {
             ' bg-white dark:bg-dark-blue rounded-md shadow-lg'
           }
         >
-          <FontAwesomeIcon icon={faArrowLeft} fixedWidth />
+          {/*<FontAwesomeIcon icon={faArrowLeft} fixedWidth />*/}
           <span>Back</span>
         </a>
       </Link>

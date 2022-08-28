@@ -1,10 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faChevronDown,
-  faTimes,
-  faCheck,
-} from '@fortawesome/free-solid-svg-icons'
+
 import { classNames } from '../lib/utils'
 
 const Menu = ({
@@ -47,7 +42,7 @@ const Menu = ({
             ' transform transition-all duration-300'
           }
         >
-          <FontAwesomeIcon icon={faTimes} fixedWidth />
+          xx
         </button>
       )}
       <button
@@ -66,11 +61,6 @@ const Menu = ({
         <span className="flex-grow text-left">
           {selected ? selected : placeholder}
         </span>
-        <FontAwesomeIcon
-          icon={faChevronDown}
-          className="pointer-events-none"
-          fixedWidth
-        />
       </button>
       <ul
         className={classNames(
@@ -91,7 +81,7 @@ const Menu = ({
             }
           >
             <span className="flex-grow">{menuOption}</span>
-            {menuOption === selected && <FontAwesomeIcon icon={faCheck} />}
+            {menuOption === selected && 'x'}
           </li>
         ))}
       </ul>

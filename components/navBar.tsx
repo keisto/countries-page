@@ -1,13 +1,9 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMoon as faMoonOn } from '@fortawesome/free-solid-svg-icons'
-import { faMoon as faMoonOff } from '@fortawesome/free-regular-svg-icons'
-
 import useTheme from '../hooks/useTheme'
 import Link from 'next/link'
 
 const NavBar = () => {
   const { theme, toggleTheme } = useTheme()
-  const icon = theme === 'dark' ? faMoonOn : faMoonOff
+  // const icon = theme === 'dark' ? faMoonOn : faMoonOff
 
   return (
     <nav className="bg-white dark:bg-dark-blue shadow-md">
@@ -27,7 +23,7 @@ const NavBar = () => {
             ' hover:underline'
           }
         >
-          <FontAwesomeIcon icon={icon} className="-rotate-[30deg]" />
+          {/*<FontAwesomeIcon icon={icon} className="-rotate-[30deg]" />*/}
           Dark Mode
         </button>
       </div>
