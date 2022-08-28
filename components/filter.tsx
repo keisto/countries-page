@@ -1,16 +1,17 @@
-import { useState, useEffect, useRef } from 'react'
+import { memo, useState, useEffect, useRef } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faChevronDown,
   faTimes,
   faCheck,
 } from '@fortawesome/free-solid-svg-icons'
+
 import { classNames } from '../lib/utils'
 
-const Menu = ({
+const Filter = ({
   options,
   onChangeCallback,
-  placeholder = 'Select from menu',
+  placeholder = 'Select a filter',
 }) => {
   const [selected, setSelected] = useState()
   const [open, setOpen] = useState(false)
@@ -42,7 +43,7 @@ const Menu = ({
         <button
           onClick={() => updateSelected(null)}
           className={
-            'absolute right-0 mt-2 mr-8 p-3' +
+            'absolute right-0 mt-1.5 mr-8 p-3' +
             ' hover:text-[red] hover:scale-125 ' +
             ' transform transition-all duration-300'
           }
@@ -99,4 +100,4 @@ const Menu = ({
   )
 }
 
-export default Menu
+export default memo(Filter)
