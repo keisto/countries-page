@@ -1,4 +1,7 @@
+import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
+
 import DescriptionList from './descriptionList'
 
 const CountryCard = ({ country }) => {
@@ -18,18 +21,20 @@ const CountryCard = ({ country }) => {
   ]
 
   return (
-    <Link href={`/countries/${country.alpha3Code}`}>
-      <li
-        className={
-          'w-[264px] h-[340px] mx-8 mobile:mx-auto bg-dark-blue shadow-lg rounded-md overflow-hidden cursor-pointer' +
-          ' hover:scale-105 hover:shadow-2xl transform transition-all duration-300'
-        }
-      >
+    <li
+      className={
+        'w-[264px] h-[340px] mx-8 mobile:mx-auto bg-dark-blue shadow-lg rounded-md overflow-hidden cursor-pointer' +
+        ' hover:scale-105 hover:shadow-2xl transform transition-all duration-300'
+      }
+    >
+      <Link href={`/countries/${country.alpha3Code}`} passHref>
         <a>
-          <img
+          <Image
             src={country.flags.svg}
             alt={`${country.name} flag`}
-            className="h-[152px] w-full object-cover"
+            className="shadow-2xl object-cover"
+            width={264}
+            height={152}
           />
           <div className="p-6">
             <h2 className="text-xl font-extra-bold">{country.name}</h2>
@@ -39,9 +44,9 @@ const CountryCard = ({ country }) => {
             />
           </div>
         </a>
-      </li>
-    </Link>
+      </Link>
+    </li>
   )
 }
 
-export default CountryCard
+export default React.memo(CountryCard)

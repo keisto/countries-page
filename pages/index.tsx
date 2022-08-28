@@ -1,8 +1,9 @@
 import { useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import CountryCard from '../components/countryCard'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import Menu from '../components/menu'
+import CountryCard from '../components/countryCard'
 
 const Home = ({ countries }) => {
   const [filter, setFilter] = useState('')
@@ -70,11 +71,11 @@ const Home = ({ countries }) => {
   )
 }
 
-Home.getInitialProps = async () => {
+export async function getStaticProps() {
   const res = await fetch('https://restcountries.com/v2/all')
-  const json = await res.json()
+  const countries = await res.json()
 
-  return { countries: json }
+  return { props: { countries } }
 }
 
 export default Home

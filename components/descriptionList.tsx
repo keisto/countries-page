@@ -1,3 +1,5 @@
+import React from 'react'
+
 const DescriptionList = ({ items, className = '' }) => {
   return (
     <dl className={'space-y-2 ' + className}>
@@ -11,4 +13,4 @@ const DescriptionList = ({ items, className = '' }) => {
   )
 }
 
-export default DescriptionList
+export default React.memo(DescriptionList)
