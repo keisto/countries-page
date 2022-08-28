@@ -30,7 +30,7 @@ const CountryCard = ({ country }) => {
       <Link href={`/countries/${country.alpha3Code}`} passHref>
         <a>
           <Image
-            src={country.flags.svg}
+            src={country.flags.png}
             alt={`${country.name} flag`}
             className="shadow-2xl object-cover"
             width={264}
