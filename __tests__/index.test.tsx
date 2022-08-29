@@ -32,7 +32,7 @@ const allCountries = [
 ]
 
 beforeEach(() => {
-  render(<Home countries={allCountries} />)
+  render(<Home allCountries={allCountries} />)
 })
 
 describe('Home', () => {
@@ -43,7 +43,7 @@ describe('Home', () => {
     expect(screen.queryByText('United States of America')).toBeNull()
   })
 
-  it('can filter by region dropdown', async () => {
+  it('can filter by search input', async () => {
     const searchInput = screen.getByPlaceholderText('Search for a country...')
 
     await userEvent.type(searchInput, 'Be')
@@ -52,7 +52,7 @@ describe('Home', () => {
     expect(screen.queryByText('Austria')).toBeNull()
   })
 
-  it('can filter by search input', async () => {
+  it('can filter by region dropdown', async () => {
     const regionOption = screen.getByRole('option', { name: 'Oceania' })
 
     await userEvent.click(regionOption)

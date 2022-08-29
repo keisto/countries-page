@@ -1,9 +1,9 @@
+import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMoon as faMoonOn } from '@fortawesome/free-solid-svg-icons'
 import { faMoon as faMoonOff } from '@fortawesome/free-regular-svg-icons'
 
 import useTheme from '../hooks/useTheme'
-import Link from 'next/link'
 
 const NavBar = () => {
   const { theme, toggleTheme } = useTheme()

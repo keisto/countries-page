@@ -62,7 +62,8 @@ const Details = ({ country, borders }) => {
                   <a
                     className={
                       'py-1.5 min-w-[100px] px-3 flex justify-center' +
-                      ' bg-white dark:bg-dark-blue shadow-lg rounded-md m-1.5'
+                      ' bg-white dark:bg-dark-blue shadow-lg rounded-md m-1.5' +
+                      ' hover:opacity-75 hover:scale-95 transform duration-300 transition-all'
                     }
                   >
                     {borderCountry.name}
@@ -82,8 +83,9 @@ const Details = ({ country, borders }) => {
       <Link href="/">
         <a
           className={
-            'py-2 px-8 inline-flex items-center justify-center space-x-2' +
-            ' bg-white dark:bg-dark-blue rounded-md shadow-lg'
+            'py-2 px-8 inline-flex items-center space-x-2' +
+            ' bg-white dark:bg-dark-blue rounded-md shadow-lg' +
+            ' hover:opacity-75 hover:scale-95 transform duration-300 transition-all'
           }
         >
           <FontAwesomeIcon icon={faArrowLeft} fixedWidth />

@@ -1,4 +1,4 @@
-import React from 'react'
+import { memo } from 'react'
 
 const DescriptionList = ({ items, className = '' }) => {
   return (
@@ -13,4 +13,4 @@ const DescriptionList = ({ items, className = '' }) => {
   )
 }
 
-export default React.memo(DescriptionList)
+export default memo(DescriptionList)

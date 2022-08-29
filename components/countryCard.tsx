@@ -1,4 +1,4 @@
-import React from 'react'
+import { memo } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -49,4 +49,4 @@ const CountryCard = ({ country }) => {
   )
 }
 
-export default React.memo(CountryCard)
+export default memo(CountryCard)
