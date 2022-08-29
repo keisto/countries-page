@@ -2,8 +2,6 @@ import Head from 'next/head'
 
 import NavBar from './navBar'
 
-// export const ThemeContext = createContext()
-
 const PageLayout = ({ children }) => {
   return (
     <>

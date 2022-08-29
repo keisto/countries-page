@@ -9,6 +9,7 @@ module.exports = {
   ],
   theme: {
     colors: {
+      current: 'currentColor',
       transparent: 'transparent',
       white: 'var(--color-white)',
       'very-light-gray': 'var(--color-very-light-gray)',
